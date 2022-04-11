@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Text>Element ID</Text>
+		<Description>Fills up a value of project parameter "ID"</Description>
+		<Assembly>C:\Users\monik\OneDrive\Plocha\projects\ElementID\bin\Debug\ElementID.dll</Assembly>
+		<FullClassName>ElementID.OneElementID</FullClassName>
+		<ClientId>8a098e6d-fbd6-4ce3-980a-095dbeaa302d</ClientId>
+		<VendorId>mm</VendorId>
+	</AddIn>
+	<AddIn Type="Application">
+		<Name>Application ElementID</Name>
+		<Assembly>C:\Users\monik\OneDrive\Plocha\projects\ElementID\bin\Debug\ElementID.dll</Assembly>
+		<FullClassName>ElementID.App</FullClassName>
+		<ClientId>6ab8ebb5-d0c2-4a9d-94b6-7ef4ee0c84b0</ClientId>
+		<VendorId>mm</VendorId>
+	</AddIn>
+</RevitAddIns>
