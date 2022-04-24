@@ -1,0 +1,82 @@
+﻿<Window x:Class="ElementID.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElementID"
+        mc:Ignorable="d"
+        Title="ElementID" Height="220" 
+        Width="450" 
+        ResizeMode="NoResize" 
+        OpacityMask="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+        BorderBrush="{Binding AllowDrop, ElementName=window}" 
+        WindowStyle="ToolWindow">
+
+    <Window.Background>
+        <SolidColorBrush Color="White"/>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" 
+               Margin="10,5,0,0" 
+               Content="Zapíše pro vybrané objekty hodnoty jejich ID"/>
+
+        <GroupBox Margin="10,0,10,0" Height="75" Grid.Row="1" BorderThickness="1">
+            <GroupBox.Header>Vyberte objekty</GroupBox.Header>
+            <StackPanel Grid.Row="1">
+                <Label Content="Vyberte objekty" 
+                       HorizontalAlignment="Left" 
+                       Margin="0,-22,0,0" 
+                       VerticalAlignment="Top" 
+                       Background="White"/>
+                <RadioButton Margin="0,3,0,0" 
+                             IsChecked="{Binding AllObjects, UpdateSourceTrigger=PropertyChanged, Mode= TwoWay}" 
+                             >Všechny objekty v aktualním pohledu</RadioButton>
+                <RadioButton Margin="0,10,0,0" >Pouze vybrané objekty v aktualním pohledu</RadioButton>
+
+            </StackPanel>
+ 
+        </GroupBox>
+
+        <Button Grid.Row="1" 
+                Grid.Column="1" 
+                Name="Sel" 
+                Content="Vyberte z pohledu" 
+                HorizontalAlignment="Right" 
+                Margin="0,0,16,17" 
+                VerticalAlignment="Bottom" 
+                Width="140" 
+                Height="21" 
+                Click="BtnSelection_Click" 
+                IsEnabled="{Binding SelObjects, UpdateSourceTrigger=PropertyChanged, Mode= TwoWay}"/>
+
+        <Button Grid.Row="2" 
+                Grid.Column="1" 
+                Name="Cancel" 
+                Content="Zavřít" 
+                HorizontalAlignment="Right" 
+                Margin="0,0,12,15" 
+                VerticalAlignment="Bottom" 
+                Width="80" 
+                Height="30" 
+                Click="BtnCancel_Click"/>
+
+        <Button Grid.Row="2" 
+                Grid.Column="1" 
+                Name="Confirm" 
+                Content="Potvrdit" 
+                HorizontalAlignment="Right" 
+                Margin="0,0,95,15" 
+                VerticalAlignment="Bottom" 
+                Width="110" 
+                Height="30" 
+                Click ="BtnConfirm_Click"/>
+    </Grid>
+</Window>
+ 

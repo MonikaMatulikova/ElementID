@@ -21,7 +21,7 @@ namespace ElementID
             IDPanelNewTab.AddItem(PushButtonData("4a Element ID", "Zapsat ID \n všechny objekty", "ElementID.AllElementsID"));
             IDPanelNewTab.AddItem(PushButtonData("4b Element ID", "Zapsat ID \n pouze vybrané", "ElementID.ElementID"));
             IDPanelNewTab.AddItem(PushButtonData("5 Element ID", "Zapsat ID \n vybrané/vybrat", "ElementID.ElementIDSel"));
-            IDPanelNewTab.AddItem(PushButtonData("6 Element ID", "Zapsat ID \n dialog", "ElementID.ElemenIDWithDialog"));
+            IDPanelNewTab.AddItem(PushButtonData("6 Element ID", "Zapsat ID \n dialog", "ElementID.ElemenIDDialog"));
 
             return Result.Succeeded;
         }

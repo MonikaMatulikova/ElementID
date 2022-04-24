@@ -41,6 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="RevitAPI">
       <HintPath>$(ProgramW6432)\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
       <Private>False</Private>
@@ -52,6 +53,7 @@
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -60,13 +62,24 @@
     <Compile Include="Commands\ElementID.cs" />
     <Compile Include="Commands\OneElementID.cs" />
     <Compile Include="Commands\ElementIDSel.cs" />
-    <Compile Include="Commands\ElemenIDWithDialog.cs" />
+    <Compile Include="Commands\ElemenIDDialog.cs" />
     <Compile Include="Commands\ID.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="VM_MainWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ElemenID.addin" />
     <Resource Include="Resources\CS_commandico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
